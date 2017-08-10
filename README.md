@@ -149,8 +149,12 @@ What's nice about using the image views (along with the stack view) is that they
 	<tbody>
 		<tr>
 			<td width="350"><img src="./Images/scrolling_pokestack.png" alt="Horiz Scroll PokéStack"></td>
-			<td><img src="./Images/pokestack_full_constraints.png" width="350" alt="Small Set of Constraints Needed"></td>
+			<td width="350"><img src="./Images/pokestack_full_constraints.png" alt="Small Set of Constraints Needed"></td>
 		</tr>
+	</tbody>
+</table>
+<table>
+	<tbody>
 		<tr>
 			<td width="700"><img src="./Images/pokestack_with_scroll_profile.png"  alt=""></td>
 		</tr>
