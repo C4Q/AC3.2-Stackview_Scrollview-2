@@ -94,56 +94,39 @@ Today's lesson is going to focus on implementing a simple, horizontally scrollin
 You may have already noticed how each of these options affects the contents of the stack view.
 
 <table>
-	<thead>
-		<tr>
-			<td> </td>
-			<td>Vertical Align Center</td>
-			<td>Horizontal Dist. Fill</td>
-		</tr>
-	</thead>
-
-	<tbody>
-		<tr>
-			<td>
-			Though one thing you might not immediately realize is that the four icons have a maximum height and width of `128pt`. But each one has a `width` or `height` slightly smaller than `128pt`. For exaple, the image of Squirtle is slightly narrower than the other icons. You can observe this by switching the `alignment` of the stack view to be `center` instead of `fill`.
-			<br>
-			Alternatively, you could switch `axis` to `horizontal` and set `distribution` to `fill`
-			</td>
-
-			<td width="250">
-				<img src="./Images/alignment_center_option.png" alt="Slightly narrow icons">
-			</td>
-
-			<td width="250">
-				<img src="./Images/slightly_narrower_pokemon.png" width="400" alt="Slightly narrower Squirtle">
-			</td>
-
-		</tr>
-	</tbody>
+<thead>
+	<tr>
+	<td> </td>
+	<td>Vertical Align Center</td>
+	<td>Horizontal Dist. Fill</td>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+	<td>
+	Though one thing you might not immediately realize is that the four icons have a maximum height and width of `128pt`. But each one has a `width` or `height` slightly smaller than `128pt`. For exaple, the image of Squirtle is slightly narrower than the other icons. You can observe this by switching the `alignment` of the stack view to be `center` instead of `fill`.
+	<br>
+	Alternatively, you could switch `axis` to `horizontal` and set `distribution` to `fill`
+	</td>
+	<td width="250"><img src="./Images/alignment_center_option.png" alt="Slightly narrow icons"></td>
+	<td width="250"><img src="./Images/slightly_narrower_pokemon.png" width="400" alt="Slightly narrower Squirtle"></td>
+	</tr>
+</tbody>
 </table>
 
 <table>
-	<tbody>
-		<tr>
-
-			<td>
-				Using the slight differences in the width and height of the images, these icons are a good way to visually identify how the options of a stack view affects its content.
-
-				Now, let's make our images look uniform in size by using:
-
-				<ul>
-					<li><code>Axis</code> = <code>Horizontal</code></li>
-					<li><code>Alignment</code> = <code>Fill</code></li>
-					<li><code>Distribution</code> = <code>Fill Equally</code></li>
-				</ul>
-			</td>
-
-			<td width="500">
-				<img src="./Images/result_of_fill_equal.png" alt="Fill Equally">
-			</td>
-
-		</tr>
-	</tbody>
+<tbody>
+<tr>
+	<td>Using the slight differences in the width and height of the images, these icons are a good way to visually identify how the options of a stack view affects its content. Now, let's make our images look uniform in size by using:
+		<ul>
+		<li><code>Axis</code> = <code>Horizontal</code></li>
+		<li><code>Alignment</code> = <code>Fill</code></li>
+		<li><code>Distribution</code> = <code>Fill Equally</code></li>
+		</ul>
+	</td>
+	<td width="500"><img src="./Images/result_of_fill_equal.png" alt="Fill Equally"></td>
+</tr>
+</tbody>
 </table>
 
 
