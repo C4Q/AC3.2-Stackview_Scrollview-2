@@ -41,20 +41,20 @@ Today's lesson is going to focus on implementing a simple, horizontally scrollin
 
 <table>
 	<thead>
-		<td>
-			<tr>Image Views</tr>
-			<tr>Scale Fill</tr>
-			<tr>Aspect Fill</tr>
-			<tr>Aspect Fit</tr>
-		</td>
+		<tr>
+			<td>Image Views</td>
+			<td>Scale Fill</td>
+			<td>Aspect Fill</td>
+			<td>Aspect Fit</td>
+		</tr>
 	</thead>
 	<tbody>
-		<td>
-			<tr><img src="./Images/adding_image_views.png" width="180" alt="Center Aligning ImageViews"></tr>
-			<tr><img src="./Images/scale_to_fill.png" width="180" alt="Scale to Fill"></tr>
-			<tr><img src="./Images/aspect_fill.png" width="180" alt="Aspect Fill"></tr>
-			<tr><img src="./Images/aspect_fit.png" width="180" alt="Aspect Fit"></tr>
-		</td>
+		<tr>
+			<td><img src="./Images/adding_image_views.png" width="180" alt="Center Aligning ImageViews"></td>
+			<td><img src="./Images/scale_to_fill.png" width="180" alt="Scale to Fill"></td>
+			<td><img src="./Images/aspect_fill.png" width="180" alt="Aspect Fill"></td>
+			<td><img src="./Images/aspect_fit.png" width="180" alt="Aspect Fit"></td>
+		</tr>
 	</tbody>
 </table>
 
