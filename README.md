@@ -143,17 +143,44 @@ You may have already noticed how each of these options affects the contents of t
 	- And add `Center Vertically In Container`
 13. Run the project.
 
-![Final Scrolling](http://imgur.com/g8bI1gzl.jpg)
-
 What's nice about using the image views (along with the stack view) is that they define their own intrinsic content size. So we have far fewer constraints needed to satisfy autolayout.
 
-<img src="./Images/pokestack_full_constraints.png" width="" alt="">
+<table>
+	<tbody>
+		<tr>
+			<td width="350"><img src="./Images/scrolling_pokestack.png" alt="Horiz Scroll PokéStack"></td>
+			<td><img src="./Images/pokestack_full_constraints.png" width="350" alt="Small Set of Constraints Needed"></td>
+		</tr>
+		<tr>
+			<td width="700"><img src="./Images/pokestack_with_scroll_profile.png"  alt=""></td>
+		</tr>
+	</tbody>
+</table>
+
+
 
 ---
 ### 3. Exercises
 
-1. Continue on and create 2 more horizontally scrolling stack views using the other two pokemon asset categories in `Assets.xcassets` ("Common Pokemon", "Uncommon Pokemon")
-2. Add a label just above each stackview with that group's category
-3. Select all of these views (the 3 stack views and 3 labels) and embed them in a vertical stack view
+1. Continue on and create 2 more horizontally scrolling stack views using the other two pokemon asset categories in `Assets.xcassets` ("Common Pokemon" and "Uncommon Pokemon")
+2. Add a label just above each stack view with that group's category ("Starter Pokemon", "Common Pokemon", Uncommon Pokemon")
+3. Select the 3 stack views and 3 labels and embed them in a `vertical` stack view
 4. Now, with that vertical stack view selected, embed everything in a vertical-only scroll view.
 5. (extra) If you have time and are interested, take a look at the [AutoLayout Guide: Stack Views](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/LayoutUsingStackViews.html) link. Experiment with different layouts and see what you can create. Just be sure that your storyboard doesn't list any warnings or errors.
+
+Here's what your finished product should look like:
+
+<table>
+	<thead>
+		<tr>
+			<td>Exercise 1: Running in Sim</td>
+			<td>Execise 1: Expanded View</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td width="300"><img src="./Images/first_exercise_headon.png" alt="Exercise 1: Running in Sim"></td>
+			<td width="500" ><img src="./Images/first_exercise_profile.png" alt="Execise 1: Expanded View"></td>
+		</tr>
+	</tbody>
+</table>
