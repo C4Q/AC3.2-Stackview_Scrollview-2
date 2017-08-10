@@ -57,10 +57,10 @@ Today's lesson is going to focus on implementing a simple, horizontally scrollin
 	</thead>
 	<tbody>
 		<tr>
-			<td width="200"><img src="./Images/adding_image_views.png" alt="Center Aligning ImageViews"></td>
-			<td width="200"><img src="./Images/scale_to_fill.png" alt="Scale to Fill"></td>
-			<td width="200"><img src="./Images/aspect_fill.png" alt="Aspect Fill"></td>
-			<td width="200"><img src="./Images/aspect_fit.png" alt="Aspect Fit"></td>
+			<td width="200"><img src="./Images/adding_image_views.png" width="180" alt="Center Aligning ImageViews"></td>
+			<td width="200"><img src="./Images/scale_to_fill.png" width="180" alt="Scale to Fill"></td>
+			<td width="200"><img src="./Images/aspect_fill.png" width="180" alt="Aspect Fill"></td>
+			<td width="200"><img src="./Images/aspect_fit.png" width="180" alt="Aspect Fit"></td>
 		</tr>
 		<tr>
 			<td>Default image views in Interface Builder</td>
