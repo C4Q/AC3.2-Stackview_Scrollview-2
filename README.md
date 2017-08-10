@@ -79,24 +79,52 @@ Today's lesson is going to focus on implementing a simple, horizontally scrollin
 	</tbody>
 </table>
 
-3. Now that we have the four imageviews set up we can add them to a stack view. There are a couples of ways to add a stack view in storyboard:
+6. Now that we have the four imageviews set up we can add them to a stack view. There are a couples of ways to add a stack view in storyboard:
 	- You can drag in either a `Horizontal Stack View` or `Vertical Stack View` from the Object Library in the right pane
 	- You can select the views you'd like to place in a stack view, and then go to `Editor > Embed In > Stack View`
-	- Or, you can select the views and click on the "Stack" button, conveniently located next to the "Align", "Pin" and "Resolve AutoLayout Issues" buttons on the bottom right corner of IB.
+	- Or, you can select the views and click on the `Stack` button, conveniently located next to the `Align`, `Pin` and `Resolve AutoLayout Issues` buttons on the bottom right corner of Interface Builder.
 	- <img src="./Images/embed_in_stack_button.png" alt="Convenient Embedding Stack Button">
-4. There are three main configuration options needed to consider for a stack view (see `UIStackView` documentation under ["Managing the Stack View's Apperance"](https://developer.apple.com/documentation/uikit/uistackview))
+7. There are three main configuration options needed to consider for a stack view (see `UIStackView` documentation under ["Managing the Stack View's Apperance"](https://developer.apple.com/documentation/uikit/uistackview))
 	- `Axis` - the orientation of the stack, `vertical` or `horizontal`
 	- `Alignment` - the layout of the arranged views *perpendicular* to the stack’s axis
 	- `Distribution` - the layout of the arranged views *along* the stack’s axis
-5. Let's make this particular stack view
-  - `Axis` = `Horizontal`
-  - `Alignment` = `Fill`
-  - `Distribution` = `Fill Equally`
 
-You already probably noticed how each of these options affects the contents of the stack view. What's rather nice is that the 4 icons, collectively, have a maximum height and width of `128pt`. But on their own, they have `width` or `height` slightly smaller than `128`.
-![Squirtle Squirt](http://imgur.com/PFG4nrAm.jpg)
-For example, the Squirtle icon has a width of slightly less than `128`, so in a `Horizontal` layout with `Fill` aligment and distribution you will be able to see that the `UIImageView` becomes a bit narrower. Using these slight differences, these 4 icons are a good way to visually identify the results of changes the different options of the stack view.
+> Developer's Note: Once again, it's encouraged that you try out variations of each of these properties to get a sense for what each is accomplishing. Visual changes made by each of these properties is best understood having used them for a while.
+
+You may have already noticed how each of these options affects the contents of the stack view.
+
+<table><thead></thead>
+	<tbody>
+		<tr>
+			<td><img src="./Images/alignment_center_option.png" width="400" alt="Slightly narrow icons"></td>
+			<td>Though one thing you might not immediately realize is that the four icons have a maximum height and width of `128pt`. But each one has a `width` or `height` slightly smaller than `128pt`. For exaple, the image of Squirtle is slightly narrower than the other icons. You can observe this by switching the `alignment` of the stack view to be `center` instead of `fill`.</td>
+		</tr>
+	</tbody>
+</table>
+
+<br>
+
+<br>
+
+<br>
+<img src="./Images/slightly_narrower_pokemon.png" width="400" alt="Slightly narrower Squirtle">
+<br>
+
+Meaning, in a `Horizontal` layout with `Fill` alignment and distribution you will be able to see that the `UIImageView` becomes a bit narrower. Using these slight differences, these 4 icons are a good way to visually identify the results of changes the different options of the stack view.
 ![Perfect Padding](http://imgur.com/BPfbJxBl.jpg)
+
+
+
+
+
+
+
+8. Let's make this particular stack view
+	-`Axis` = `Horizontal`
+	- `Alignment` = `Fill`
+	- `Distribution` = `Fill Equally`
+
+
 
 1. Now just add the following constraints to the stackview:
   - `8pt` left and top margins
