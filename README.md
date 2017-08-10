@@ -93,14 +93,15 @@ Today's lesson is going to focus on implementing a simple, horizontally scrollin
 
 You may have already noticed how each of these options affects the contents of the stack view.
 
-<table border-width="0">
+<table>
 	<thead>
 		<tr>
-			<td></td>
+			<td> </td>
 			<td>Vertical Align Center</td>
 			<td>Horizontal Dist. Fill</td>
 		</tr>
 	</thead>
+
 	<tbody>
 		<tr>
 			<td>
