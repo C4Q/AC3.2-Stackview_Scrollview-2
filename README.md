@@ -41,7 +41,7 @@ Today's lesson is going to focus on implementing a simple, horizontally scrollin
 
 <table>
 	<thead>
-		<tr>
+		<tr text-align="center">
 			<td>Image Views</td>
 			<td>Scale Fill</td>
 			<td>Aspect Fill</td>
