@@ -93,11 +93,11 @@ Today's lesson is going to focus on implementing a simple, horizontally scrollin
 
 You may have already noticed how each of these options affects the contents of the stack view.
 
-<table><thead></thead>
+<table border-width="0"><thead></thead>
 	<tbody>
 		<tr>
-			<td width="400">Though one thing you might not immediately realize is that the four icons have a maximum height and width of `128pt`. But each one has a `width` or `height` slightly smaller than `128pt`. For exaple, the image of Squirtle is slightly narrower than the other icons. You can observe this by switching the `alignment` of the stack view to be `center` instead of `fill`.</td>
-			<td width="250"><img src="./Images/alignment_center_option.png" alt="Slightly narrow icons"></td>
+			<td>Though one thing you might not immediately realize is that the four icons have a maximum height and width of `128pt`. But each one has a `width` or `height` slightly smaller than `128pt`. For exaple, the image of Squirtle is slightly narrower than the other icons. You can observe this by switching the `alignment` of the stack view to be `center` instead of `fill`.</td>
+			<td width="300"><img src="./Images/alignment_center_option.png" alt="Slightly narrow icons"></td>
 		</tr>
 	</tbody>
 </table>
