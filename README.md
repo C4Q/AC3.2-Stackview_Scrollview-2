@@ -93,57 +93,75 @@ Today's lesson is going to focus on implementing a simple, horizontally scrollin
 
 You may have already noticed how each of these options affects the contents of the stack view.
 
-<table border-width="0"><thead></thead>
+<table border-width="0">
+	<thead>
+		<tr>
+			<td></td>
+			<td>Vertical Align Center</td>
+			<td>Horizontal Dist. Fill</td>
+		</tr>
+	</thead>
 	<tbody>
 		<tr>
-			<td>Though one thing you might not immediately realize is that the four icons have a maximum height and width of `128pt`. But each one has a `width` or `height` slightly smaller than `128pt`. For exaple, the image of Squirtle is slightly narrower than the other icons. You can observe this by switching the `alignment` of the stack view to be `center` instead of `fill`.</td>
-			<td width="300"><img src="./Images/alignment_center_option.png" alt="Slightly narrow icons"></td>
+			<td>
+			Though one thing you might not immediately realize is that the four icons have a maximum height and width of `128pt`. But each one has a `width` or `height` slightly smaller than `128pt`. For exaple, the image of Squirtle is slightly narrower than the other icons. You can observe this by switching the `alignment` of the stack view to be `center` instead of `fill`.
+			<br>
+			Alternatively, you could switch `axis` to `horizontal` and set `distribution` to `fill`
+			</td>
+
+			<td width="250">
+				<img src="./Images/alignment_center_option.png" alt="Slightly narrow icons">
+			</td>
+
+			<td width="250">
+				<img src="./Images/slightly_narrower_pokemon.png" width="400" alt="Slightly narrower Squirtle">
+			</td>
+
 		</tr>
 	</tbody>
 </table>
 
-<br>
+<table>
+	<thead></thead>
+	<tbody>
+		<tr>
+			<td>
+				Using the slight differences in the width and height of the images, these icons are a good way to visually identify how the options of a stack view affects its content.
 
-<br>
+				Now, let's make our images look uniform in size by using:
 
-<br>
-<img src="./Images/slightly_narrower_pokemon.png" width="400" alt="Slightly narrower Squirtle">
-<br>
-
-Meaning, in a `Horizontal` layout with `Fill` alignment and distribution you will be able to see that the `UIImageView` becomes a bit narrower. Using these slight differences, these 4 icons are a good way to visually identify the results of changes the different options of the stack view.
-![Perfect Padding](http://imgur.com/BPfbJxBl.jpg)
-
-
-
-
-
-
-
-8. Let's make this particular stack view
-	-`Axis` = `Horizontal`
-	- `Alignment` = `Fill`
-	- `Distribution` = `Fill Equally`
+				<ul>
+					<li><code>Axis</code> = <code>Horizontal</code></li>
+					<li><code>Alignment</code> = <code>Fill</code></li>
+					<li><code>Distribution</code> = <code>Fill Equally</code></li>
+				</ul>
+			</td>
+			<td width="500">
+				<img src="./Images/result_of_fill_equal.png" alt="Fill Equally">
+			</td>
+		</tr>
+	</tbody>
+</table>
 
 
-
-1. Now just add the following constraints to the stackview:
-  - `8pt` left and top margins
-2. Run the project...
-  - ![Needs Scrolling](http://imgur.com/VFYTt0Bm.jpg)
-  - Ah.. bummer. I guess we'll need a scroll view
-3. Select the stack view, then go to Editor > Embed In > Scroll View
-4. For the scroll view, you'll need the following constraints:
-  - Pin to top, left and right edges of its super view
-5. For the stack view, add:
-  - `8pt` top, left, right, bottom margins
-  - Center Vertically In Container
-6. Run the project
+8. Lastly, pin the stackview to the top-left of the screen with the following constraints:
+	- `8pt` `left` and `top` relative to margins
+9. Run the project... Ah.. bummer. I guess we'll need a scroll view
+	- <img src="./Images/needs_scrolling.png" width="500" alt="Needs scrolling!">
+10. Selecting the stack view, go to `Editor > Embed In > Scroll View`
+11. For the scroll view, you'll need the following constraints:
+	- Pin to `top`, `left` and `right` edges of its super view
+12. For the stack view:
+	- remove the two constraints we just set on the stack view (`left` and `top` pins)
+	- Add `8pt top, left, right, bottom`, relative to margins
+	- And add `Center Vertically In Container`
+13. Run the project.
 
 ![Final Scrolling](http://imgur.com/g8bI1gzl.jpg)
 
 What's nice about using the image views (along with the stack view) is that they define their own intrinsic content size. So we have far fewer constraints needed to satisfy autolayout.
 
-![Constraints](http://imgur.com/D01DJ7Ql.jpg)
+<img src="./Images/pokestack_full_constraints.png" width="" alt="">
 
 ---
 ### 3. Exercises
