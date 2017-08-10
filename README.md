@@ -123,12 +123,6 @@ You may have already noticed how each of these options affects the contents of t
 </table>
 
 <table>
-	<thead>
-		<tr>
-			<td></td>
-			<td></td>
-		</tr>
-	</thead>
 	<tbody>
 		<tr>
 
