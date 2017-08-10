@@ -17,8 +17,7 @@
 
 1. Exploring the `UIStackView` UI element for quickly aligning rows and/or columns of known content
 2. Further reinforcing the use of `UIScrollView` to display large amounts of content in a limited space
-
-
+3. Practicing layout with a storyboard
 
 ---
 ### 1. Intro
@@ -30,13 +29,36 @@ That's one of the reasons Apple introduced the `UIStackView`: to streamline the 
 Let's start simple though: We're going to take a basic look at a stack view to create a horizontally scrolling row of Pokémon icons.
 
 ---
-
 ### 2. PokéStack
+
+Today's lesson is going to focus on implementing a simple, horizontally scrolling stack view. We're going to take a look at how to embed elements into a stack view, along with some of the options we have for configuring how elements will be laid out once they are embedded in the stack view.
+
 1. Drag in a new `UIViewController` into `Main.storyboard` and set it to be the initial view controller
 2. With the view controller selected, go into `Editor > Embed In > Tab Bar`
+3. Drag in four `UIImageView` and set their images to the four starter Pokémon. For the unfamiliar, they are: `Pikachu, Squirtle, Bulbasaur` and `Charmander`.
+	- Set the background color of the image views to whatever you prefer, so long as it stands out on a white background.
+4. By default, images added will have their `contentMode` set to `Aspect Fill`.
 
-2. Drag in 4 `UIImageView` and set their images to the 4 starter Pokémon (yes, Pikachu counts as a starter).
-  - Set the background color of the image views to whatever you prefer, so long as it stands out on a white background
+<table>
+	<thead>
+		<td>
+			<tr>Image Views</tr>
+			<tr>Scale Fill</tr>
+			<tr>Aspect Fill</tr>
+			<tr>Aspect Fit</tr>
+		</td>
+	</thead>
+	<tbody>
+		<td>
+			<tr><img src="./Images/adding_image_views.png" width="180" alt="Center Aligning ImageViews"></tr>
+			<tr><img src="./Images/scale_to_fill.png" width="180" alt="Scale to Fill"></tr>
+			<tr><img src="./Images/aspect_fill.png" width="180" alt="Aspect Fill"></tr>
+			<tr><img src="./Images/aspect_fit.png" width="180" alt="Aspect Fit"></tr>
+		</td>
+	</tbody>
+</table>
+
+
   - Change the image content mode to `Aspect Fit`. This resizing mode keeps the original image's aspect ratio and scales the image to fit inside the frame of the `UIImageView` (feel free to play around with the other content modes later to get a sense for each of them)
   - ![Just Added](http://imgur.com/dHFwYqUm.jpg)
 3. Add the 4 image views to a stack view. There are a lot of ways to add a stack view to IB
