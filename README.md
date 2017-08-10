@@ -8,6 +8,10 @@
 3. [Into to Stack Views in iOS 9 - App Coda](http://www.appcoda.com/stack-views-intro/)
 4. [UIStackView by Example - Hacking With Swift](https://www.hackingwithswift.com/read/31/2/uistackview-by-example)
 
+#### References
+
+1. [`UIViewContentMode` - Apple](https://developer.apple.com/documentation/uikit/uiviewcontentmode)
+
 ---
 ### Vocabulary
 
@@ -36,12 +40,11 @@ Today's lesson is going to focus on implementing a simple, horizontally scrollin
 1. Drag in a new `UIViewController` into `Main.storyboard` and set it to be the initial view controller
 2. With the view controller selected, go into `Editor > Embed In > Tab Bar`
 3. Drag in four `UIImageView` and set their images to the four starter Pokémon. For the unfamiliar, they are: `Pikachu, Squirtle, Bulbasaur` and `Charmander`.
-	- Set the background color of the image views to whatever you prefer, so long as it stands out on a white background.
-4. By default, images added will have their `contentMode` set to `Aspect Fill`.
+4. By default, images added will have their `contentMode` set to `Aspect Fill`. `Aspect Fill` will attempt to fill the bounds of the view while preserving the aspect ratio of the content. Two other common options are `scale fill` which will attempt to fill the bounds of the view stretching content if needed, and `aspect fit` which will size the content to fit within the bounds of the view while preserving aspect ratio. See the table below for further explanation (and feel free to play around with the other content modes to get a sense for each of them):
 
 <table>
 	<thead>
-		<tr text-align="center">
+		<tr>
 			<td>Image Views</td>
 			<td>Scale Fill</td>
 			<td>Aspect Fill</td>
@@ -59,17 +62,32 @@ Today's lesson is going to focus on implementing a simple, horizontally scrollin
 </table>
 
 
-  - Change the image content mode to `Aspect Fit`. This resizing mode keeps the original image's aspect ratio and scales the image to fit inside the frame of the `UIImageView` (feel free to play around with the other content modes later to get a sense for each of them)
-  - ![Just Added](http://imgur.com/dHFwYqUm.jpg)
-3. Add the 4 image views to a stack view. There are a lot of ways to add a stack view to IB
-  - You can drag in either a `Horizontal Stack View` or `Vertical Stack View` from the Object Library in the right pane
-  - You can select the views you'd like to place in a stack view, and then go to Editor > Embed In.. > Stack View
-  - Or, you can select the views and click on the "Stack" button, conveniently located next to the "Align", "Pin" and "Resolve AutoLayout Issues" buttons on the bottom right corner of IB.
-  - ![Vertically Stacked](http://imgur.com/cQzDXeEm.jpg)
-4. There are three major options to configure a stack view (refer to the Apple doc for full explanations)
-  - `Axis`
-  - `Alignment`
-  - `Distribution`
+5. When dealing with images, we're usually most concerned about preserving aspect ratio (so that the image doesn't appear distorted). Change the image content mode to `Aspect Fit`. Also, set the background color of the image views so that we can better see the bounds of the view.
+
+<table>
+	<thead>
+		<tr>
+			<td>Aspect Fit, Bkdg Color</td>
+			<td>Util Panel, Content Mode</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><img src="./Images/vertical_fit_pokestack.png" width="250" alt="Aspect Fitted with background color"></td>
+			<td><img src="./Images/aspect_fit_util_panel.png" width="250" alt="Utilities Panel, Selecting Content Mode"></td>
+		</tr>
+	</tbody>
+</table>
+
+3. Now that we have the four imageviews set up we can add them to a stack view. There are a couples of ways to add a stack view in storyboard:
+	- You can drag in either a `Horizontal Stack View` or `Vertical Stack View` from the Object Library in the right pane
+	- You can select the views you'd like to place in a stack view, and then go to `Editor > Embed In > Stack View`
+	- Or, you can select the views and click on the "Stack" button, conveniently located next to the "Align", "Pin" and "Resolve AutoLayout Issues" buttons on the bottom right corner of IB.
+	- <img src="./Images/embed_in_stack_button.png" alt="Convenient Embedding Stack Button">
+4. There are three main configuration options needed to consider for a stack view (see `UIStackView` documentation under ["Managing the Stack View's Apperance"](https://developer.apple.com/documentation/uikit/uistackview))
+	- `Axis` - the orientation of the stack, `vertical` or `horizontal`
+	- `Alignment` - the layout of the arranged views *perpendicular* to the stack’s axis
+	- `Distribution` - the layout of the arranged views *along* the stack’s axis
 5. Let's make this particular stack view
   - `Axis` = `Horizontal`
   - `Alignment` = `Fill`
