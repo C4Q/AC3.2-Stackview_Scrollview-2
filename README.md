@@ -122,9 +122,15 @@ You may have already noticed how each of these options affects the contents of t
 </table>
 
 <table>
-	<thead></thead>
+	<thead>
+		<tr>
+			<td></td>
+			<td></td>
+		</tr>
+	</thead>
 	<tbody>
 		<tr>
+
 			<td>
 				Using the slight differences in the width and height of the images, these icons are a good way to visually identify how the options of a stack view affects its content.
 
@@ -136,9 +142,11 @@ You may have already noticed how each of these options affects the contents of t
 					<li><code>Distribution</code> = <code>Fill Equally</code></li>
 				</ul>
 			</td>
+
 			<td width="500">
 				<img src="./Images/result_of_fill_equal.png" alt="Fill Equally">
 			</td>
+
 		</tr>
 	</tbody>
 </table>
