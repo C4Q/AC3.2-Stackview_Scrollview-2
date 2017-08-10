@@ -7,6 +7,7 @@
 2. [AutoLayout Guide: Stack Views - Apple](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/LayoutUsingStackViews.html)
 3. [Into to Stack Views in iOS 9 - App Coda](http://www.appcoda.com/stack-views-intro/)
 4. [UIStackView by Example - Hacking With Swift](https://www.hackingwithswift.com/read/31/2/uistackview-by-example)
+5. [Views with Intrinsic Content Size - Apple](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/ViewswithIntrinsicContentSize.html)
 
 #### References
 
@@ -16,6 +17,8 @@
 ### Vocabulary
 
 1. **Adaptive Design**: having your app resize its UI and content such that it looks good on any sized screen ([Apple](https://developer.apple.com/design/adaptivity/))
+2. **Aspect Ratio**:  The proportional relationship between its width and its height. It is commonly expressed as two numbers separated by a colon, as in 16:9. ([Wiki](https://en.wikipedia.org/wiki/Aspect_ratio_(image))
+3. **Intrinsic Content Size**: ([Apple](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/ViewswithIntrinsicContentSize.html))
 
 ---
 ### 0. Objectives
@@ -58,6 +61,12 @@ Today's lesson is going to focus on implementing a simple, horizontally scrollin
 			<td><img src="./Images/scale_to_fill.png" width="180" alt="Scale to Fill"></td>
 			<td><img src="./Images/aspect_fill.png" width="180" alt="Aspect Fill"></td>
 			<td><img src="./Images/aspect_fit.png" width="180" alt="Aspect Fit"></td>
+		</tr>
+		<tr>
+			<td>Default image views in Interface Builder</td>
+			<td><em>Scale to Fill:</em> Tries to fill the bounds of the view, stretching content if necessary.</td>
+			<td><em>Aspect Fill:</em> Tries to fill the bounds of the view based on the larger dimension (width or height). Keeps aspect ratio of the content.</td>
+			<td><em>Aspect Fit:</em> Fits the content to within the bounds of the view, preserving aspect ratio.</td>
 		</tr>
 	</tbody>
 </table>
@@ -105,9 +114,9 @@ You may have already noticed how each of these options affects the contents of t
 <tbody>
 	<tr>
 	<td>
-	Though one thing you might not immediately realize is that the four icons have a maximum height and width of `128pt`. But each one has a `width` or `height` slightly smaller than `128pt`. For exaple, the image of Squirtle is slightly narrower than the other icons. You can observe this by switching the `alignment` of the stack view to be `center` instead of `fill`.
+	Though one thing you might not immediately realize is that the four icons have a maximum height and width of <code>128pt</code>. But each one has a <code>width</code> or <code>height</code> slightly smaller than <code>128pt</code>. For example, the image of Squirtle is slightly narrower than the other icons. You can observe this by switching the <code>alignment</code> of the stack view to be <code>center</code> instead of <code>fill</code>.
 	<br>
-	Alternatively, you could switch `axis` to `horizontal` and set `distribution` to `fill`
+	Alternatively, you could switch <code>axis</code> to <code>horizontal</code> and set <code>distribution</code> to <code>fill</code>
 	</td>
 	<td width="250"><img src="./Images/alignment_center_option.png" alt="Slightly narrow icons"></td>
 	<td width="250"><img src="./Images/slightly_narrower_pokemon.png" width="400" alt="Slightly narrower Squirtle"></td>
@@ -167,11 +176,13 @@ What's nice about using the image views (along with the stack view) is that they
 ---
 ### 3. Exercises
 
+> Note: There are no tests for these exercises
+> Note: Please use the existing project for these exercises; add new `UIViewController` to the storyboard and link them to the existing `UITabBarController`
+
 1. Continue on and create 2 more horizontally scrolling stack views using the other two pokemon asset categories in `Assets.xcassets` ("Common Pokemon" and "Uncommon Pokemon")
-2. Add a label just above each stack view with that group's category ("Starter Pokemon", "Common Pokemon", Uncommon Pokemon")
-3. Select the 3 stack views and 3 labels and embed them in a `vertical` stack view
-4. Now, with that vertical stack view selected, embed everything in a vertical-only scroll view.
-5. (extra) If you have time and are interested, take a look at the [AutoLayout Guide: Stack Views](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/LayoutUsingStackViews.html) link. Experiment with different layouts and see what you can create. Just be sure that your storyboard doesn't list any warnings or errors.
+	- Add a label just above each stack view with that group's category ("Starter Pokemon", "Common Pokemon", Uncommon Pokemon")
+	- Select the 3 stack views and 3 labels and embed them in a `vertical` stack view
+	- Now, with that vertical stack view selected, embed everything in a vertical-only scroll view.
 
 Here's what your finished product should look like:
 
@@ -189,3 +200,35 @@ Here's what your finished product should look like:
 		</tr>
 	</tbody>
 </table>
+
+---
+
+2. Create two vertical stack views **each embedded in their own** vertically-scrolling, scroll view.
+	- Each scroll view should be 1/2 the width of the screen, and have its edges pinned to the edges of the view and each other (trailing edge of scroll view 1 is pinned to leading edge of scroll view 2)
+	- Add at least 6 `UIImageView` or `UIView` to each stack view to ensure you are able to demonstrate some scrolling
+	- Make sure that the images are all the same dimensions, aligned properly, and set to `aspect fit`. They should all be equally distant from each other as well.
+
+When complete, you should have something similar to:
+
+<table>
+	<thead>
+		<tr>
+			<td>Exercise 2 - Sim</td>
+			<td>Exercise 2 - Expanded</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><img src="./Images/exercise_2_headon.png" alt="Exercise 2 - In Sim"></td>
+			<td><img src="./Images/exercise_2_profile.png" alt="Exercise 2 - View Hierarchy"></td>
+		</tr>
+	</tbody>
+</table>
+
+---
+
+#### Advanced
+
+If you have time and are interested, take a look at the [AutoLayout Guide: Stack Views](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/LayoutUsingStackViews.html) link. Experiment with different layouts and see what you can create. Just be sure that your storyboard doesn't list any warnings or errors.
+
+Whatever you end up creating, share with the rest of the cohort and explain the trickier parts of your design.
