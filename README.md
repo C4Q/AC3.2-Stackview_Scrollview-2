@@ -15,6 +15,7 @@
 ---
 ### Vocabulary
 
+1. **Adaptive Design**: having your app resize its UI and content such that it looks good on any sized screen ([Apple](https://developer.apple.com/design/adaptivity/))
 
 ---
 ### 0. Objectives
