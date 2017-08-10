@@ -1,7 +1,7 @@
 # AC3.2 Stackview and Scrollview: Part II
 
 ---
-### Reading
+### Readings
 
 1. [`UIStackView` - Apple](https://developer.apple.com/reference/uikit/uistackview)
 2. [AutoLayout Guide: Stack Views - Apple](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/LayoutUsingStackViews.html)
@@ -9,19 +9,32 @@
 4. [UIStackView by Example - Hacking With Swift](https://www.hackingwithswift.com/read/31/2/uistackview-by-example)
 
 ---
+### Vocabulary
+
+
+---
+### 0. Objectives
+
+1. Exploring the `UIStackView` UI element for quickly aligning rows and/or columns of known content
+2. Further reinforcing the use of `UIScrollView` to display large amounts of content in a limited space
+
+
+
+---
 ### 1. Intro
 
-Hopefully, the previous exercises have shown you that it isn't an entirely trivial task to work with scroll views. And yet, they're everywhere. A lot of this is mitigated by using `UITableView` and `UICollectionView` to arrange elements, but sometimes it doesn't make sense to implement either of those for very simple setups that require some degree of dynamic updating.
+Hopefully, the [previous lesson exercises](https://github.com/C4Q/AC3.2-Stackview_Scrollview-1#exercises-️️-️️) have shown you that it isn't an entirely trivial task to work with scroll views. And yet, they're everywhere. A lot of this effort needed is mitigated by using `UITableView` and `UICollectionView` to neatly arrange elements, but sometimes it doesn't make sense to implement either of those for very simple setups that require some degree of dynamic sizing and updating.
 
-That's one of the reasons Apple introduced the `UIStackView`: to streamline the vertical and horizontal layouts of views. It handles a good portion of autolayout for you, which allows you to create a UI that adapts to screen size and layout changes much more easily. Now, it doesn't handle all of the autolayout which is why it's still critical knowledge. A deep understanding of autolayout and stack views will allow you to create some pretty impressive and responsive designs.
+That's one of the reasons Apple introduced the `UIStackView`: to streamline the vertical and horizontal layouts of a known number of views. It handles a good portion of autolayout for you, which allows you to create a UI that adapts to screen size and layout changes much more easily than if you were coding a `UIScrollView`. Note however, `UIStackView` doesn't handle all of the autolayout which is why it's still critical knowledge (and when we get into programmatic autolayout later in the course, this will be even further emphasized). A deep understanding of autolayout and stack views will allow you to create some pretty impressive and responsive designs without *much* work.
 
-We're going to take a basic look at a stack view to create a horizontally scrolling row of Pokémon icons.
+Let's start simple though: We're going to take a basic look at a stack view to create a horizontally scrolling row of Pokémon icons.
 
 ---
 
 ### 2. PokéStack
 1. Drag in a new `UIViewController` into `Main.storyboard` and set it to be the initial view controller
-  - *Alternatively* if you have a tab bar controller already in place, just create a connection to this view controller
+2. With the view controller selected, go into `Editor > Embed In > Tab Bar`
+
 2. Drag in 4 `UIImageView` and set their images to the 4 starter Pokémon (yes, Pikachu counts as a starter).
   - Set the background color of the image views to whatever you prefer, so long as it stands out on a white background
   - Change the image content mode to `Aspect Fit`. This resizing mode keeps the original image's aspect ratio and scales the image to fit inside the frame of the `UIImageView` (feel free to play around with the other content modes later to get a sense for each of them)
