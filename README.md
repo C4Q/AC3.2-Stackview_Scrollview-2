@@ -18,7 +18,7 @@
 
 1. **Adaptive Design**: having your app resize its UI and content such that it looks good on any sized screen ([Apple](https://developer.apple.com/design/adaptivity/))
 2. **Aspect Ratio**:  The proportional relationship between its width and its height. It is commonly expressed as two numbers separated by a colon, as in 16:9. ([Wiki](https://en.wikipedia.org/wiki/Aspect_ratio_(image))
-3. **Intrinsic Content Size**: ([Apple](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/ViewswithIntrinsicContentSize.html))
+3. **Intrinsic Content Size**: certain UI elements have a defined size that's determined by their current content. For example. a `UIButton` has an intrinsic size based on the size of the text of the button (it ends up being the size of the text + margins). ([Apple](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/ViewswithIntrinsicContentSize.html))
 
 ---
 ### 0. Objectives
